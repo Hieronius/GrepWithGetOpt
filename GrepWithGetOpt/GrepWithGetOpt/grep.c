@@ -23,7 +23,7 @@ typedef struct arguments {
 void outputLine(char *line, int n);
 void processFile(arguments arguments, char *path, regex_t * regularExpression);
 void processLine(char path);
-void printMatchByFlagO(arguments arguments, regex_t *regularExpression, char *line, char *path, int lineCount);
+//void printMatchByFlagO(arguments arguments, regex_t *regularExpression, char *line, char *path, int lineCount);
 void addRegularExpressionFromFile(arguments *arguments, char *filePath);
 void outputFromAllFiles(arguments arguments, int argc, char **argv);
 void addPattern(arguments *arguments, char *pattern);
