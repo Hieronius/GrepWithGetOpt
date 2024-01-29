@@ -73,15 +73,15 @@ testH:
 
 testF:
 	@echo "$(YELLOW)5. Test flag -f$(WHITE)"
-	echo "Line\n2\n3\nLine" > patFile.txt
+	echo "Line\nLine2\nLine3\n1\n2\n3\n" > patfile.txt
 	echo "Line 1\nLine 2\nLine 3" > test5.txt
-	grep -f patFile.txt test5.txt > original_output
-	./s21_grep -f patFile.txt test5.txt > custom_output
+	grep -f patfile.txt test5.txt > original_output
+	./s21_grep -f patfile.txt test5.txt > custom_output
 	diff -s custom_output original_output
 	rm test5.txt
 	rm original_output
 	rm custom_output
-	rm patFile
+	rm patfile.txt
 	@echo "Done"
 	
 testS:
@@ -141,6 +141,7 @@ clean:
 	rm -rf test7.txt
 	rm -rf test8.txt
 	rm -rf test9.txt
+	rm -rf patfile.txt
 	rm -rf original_output
 	rm -rf custom_output
 	rm -rf s21_grep_custom
